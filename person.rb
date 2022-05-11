@@ -1,9 +1,12 @@
-class Person
+require_relative './decorator'
+
+class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: true)
     @id = Random.rand(1..1000)
     @name = name
     @age = age
     @parent_permission = parent_permission
+    super()
   end
 
   attr_accessor :name, :age
@@ -15,6 +18,10 @@ class Person
     else
       false
     end
+  end
+
+  def correct_name
+    @name
   end
 
   private
