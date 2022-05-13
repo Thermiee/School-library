@@ -10,4 +10,8 @@ class Book
   def add_rental(date, person, book)
     @rentals << Rental.new(date, person, book)
   end
+
+  def classroom=(classroom)
+    @classroom = classroom classroom.students.push(self) unless classroom.students.include?(self)
+  end
 end
