@@ -7,7 +7,6 @@ end
 class Decorator < Nameable
   def initialize(nameable)
     @nameable = nameable
-    super()
   end
 
   def correct_name
@@ -17,7 +16,7 @@ end
 
 class CapitalizeDecorator < Decorator
   def correct_name
-    @nameable.correct_name.capitalize
+    @nameable.correct_name.upcase
   end
 end
 
