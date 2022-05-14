@@ -39,3 +39,4 @@ def main(_loop) # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComple
     end
   end
 end
+main(true)
