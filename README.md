@@ -7,6 +7,7 @@
 > - Add new books.
 > - Save records of who borrowed a given book and when.
 
+![diagram](./app_screenshot.png)
 
 ## Built With
 
@@ -23,12 +24,12 @@ Clone the project by using terminal:
 git clone https://github.com/Thermiee/School-library.git
 
 cd School-library
-
 ```
 
 ### Prerequisites
 
 -Ruby
+-Rbenv
 
 
 ## Authors
