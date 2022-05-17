@@ -4,13 +4,11 @@ require_relative './teacher'
 require_relative './rental'
 
 class App
-  attr_accessor :books, :people, :rentals, :student, :teacher
+  attr_accessor :books, :people
 
   def initialize
     @books = []
     @people = []
-    @student = []
-    @teacher = []
     @rentals = []
   end
 
@@ -18,7 +16,7 @@ class App
     if @books.length.zero?
       puts 'You don\'t have any books'
     else
-      @books.each do |book, index|
+      @books.each_with_index do |book, index|
         puts "#{index}) Title: #{book.title}, Author: #{book.author}"
       end
     end
@@ -28,7 +26,7 @@ class App
     if @people.length.zero?
       puts 'You need at least one person'
     else
-      @people.each do |person, index|
+      @people.each_with_index do |person, index|
         puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
     end
@@ -54,7 +52,7 @@ class App
     name = gets.chomp
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp
-    @student.push(Student.new(age, nil, name, parent_permission))
+    @people.push(Student.new(age, nil, name, parent_permission: parent_permission))
     puts 'Person created successfully'
   end
 
@@ -65,7 +63,7 @@ class App
     name = gets.chomp
     print 'Specialization: '
     specialization = gets.chomp
-    @teacher.push(Teacher.new(age, name, specialization))
+    @people.push(Teacher.new(age, name, specialization))
     puts 'Person created successfully'
   end
 

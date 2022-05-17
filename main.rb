@@ -7,7 +7,7 @@ def menu
   options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental',
              'List all rentals for a given person id', 'Exit']
 
-  options.each do |option, index|
+  options.each_with_index do |option, index|
     puts "#{index + 1} - #{option}"
   end
 end
