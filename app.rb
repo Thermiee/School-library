@@ -52,7 +52,8 @@ class App
     name = gets.chomp
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp
-    @people.push(Student.new(age, nil, name, parent_permission: parent_permission))
+    student=Student.new(age, nil, name, parent_permission: parent_permission)
+    @people.push(student)
     puts 'Person created successfully'
   end
 
@@ -63,7 +64,8 @@ class App
     name = gets.chomp
     print 'Specialization: '
     specialization = gets.chomp
-    @people.push(Teacher.new(age, specialization, name))
+    teacher=Teacher.new(age, name, specialization)
+    @people.push(teacher)
     puts 'Person created successfully'
   end
 
@@ -100,5 +102,4 @@ class App
       end
     end
   end
-
 end
