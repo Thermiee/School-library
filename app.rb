@@ -4,11 +4,13 @@ require_relative './teacher'
 require_relative './rental'
 
 class App
-  attr_accessor :books, :people
+  attr_accessor :books, :people, :rentals, :student, :teacher
 
   def initialize
     @books = []
     @people = []
+    @student = []
+    @teacher = []
     @rentals = []
   end
 
@@ -52,7 +54,7 @@ class App
     name = gets.chomp
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp
-    @people.push(Student.new(age, nil, name, parent_permission: parent_permission))
+    @student.push(Student.new(age, nil, name, parent_permission))
     puts 'Person created successfully'
   end
 
@@ -63,7 +65,7 @@ class App
     name = gets.chomp
     print 'Specialization: '
     specialization = gets.chomp
-    @people.push(Teacher.new(age, name, specialization))
+    @teacher.push(Teacher.new(age, name, specialization))
     puts 'Person created successfully'
   end
 
