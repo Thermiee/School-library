@@ -16,7 +16,7 @@ class App
     if @books.length.zero?
       puts 'You don\'t have any books'
     else
-      @books.each_with_index do |book, index|
+      @books.each do |book, index|
         puts "#{index}) Title: #{book.title}, Author: #{book.author}"
       end
     end
@@ -26,7 +26,7 @@ class App
     if @people.length.zero?
       puts 'You need at least one person'
     else
-      @people.each_with_index do |person, index|
+      @people.each do |person, index|
         puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
     end
