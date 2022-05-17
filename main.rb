@@ -31,7 +31,7 @@ def main(_loop) # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComple
     when 5
       app.create_rental
     when 6
-      app.list_rentals
+      app.person_rentals
     when 7
       puts 'Thank you for using this app!'
       break
