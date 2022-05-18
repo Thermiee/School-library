@@ -40,6 +40,15 @@ cd School-library
 - LinkedIn: [Emmanuel](https://www.linkedin.com/in/emmanuel-jolugbo/)
 - Email: navyblack16@yahoo.com
 
+## Authors2
+
+👤 **Dagic-zewdu**
+
+- GitHub: [Github](https://github.com/Dagic-zewdu)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/dagic-zewdu/)
+- Twitter: [Twitter](https://twitter.com/dagic4)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

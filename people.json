@@ -1,0 +1,23 @@
+[
+    {
+        "class": "Student",
+        "age": 23,
+        "name": "Derzk",
+        "parent_permission": "Y",
+        "id": 607
+    },
+    {
+        "class": "Student",
+        "age": 43,
+        "name": "Mr Rozz geller",
+        "parent_permission": "Y",
+        "id": 822
+    },
+    {
+        "class": "Student",
+        "age": 43,
+        "name": "Kassu",
+        "parent_permission": "N",
+        "id": 548
+    }
+]
