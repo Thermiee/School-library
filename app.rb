@@ -11,7 +11,7 @@ class App
     @people_storage = DataHandler.new('people.json')
     @books_storage = DataHandler.new('books.json')
     @rentals_storage = DataHandler.new('rentals.json')
-     @people = @people_storage.objects_from_array(@people_storage.read_data)
+    @people = @people_storage.objects_from_array(@people_storage.read_data)
     @books = @books_storage.objects_from_array(@books_storage.read_data)
     @rentals = @rentals_storage.rentals_from_array(@rentals_storage.read_data, @books, @people)
   end
@@ -56,7 +56,7 @@ class App
     name = gets.chomp
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp
-    student=Student.new(age,nil, name, parent_permission: parent_permission)
+    student = Student.new(age, nil, name, parent_permission: parent_permission)
 
     @people.push(student)
     puts 'Person created successfully'
@@ -107,11 +107,12 @@ class App
       end
     end
   end
+
   def exit_app
     @people_storage.write_data(@people_storage.objects_to_hash_array(@people))
     @books_storage.write_data(@books_storage.objects_to_hash_array(@books))
     @rentals_storage.write_data(@rentals_storage.objects_to_hash_array(@rentals))
-  puts 'Thank you for using this app!'
-  exit(true)
+    puts 'Thank you for using this app!'
+    exit(true)
   end
 end

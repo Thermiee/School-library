@@ -37,10 +37,12 @@ class DataHandler
 
   def rentals_from_array(array_of_rentals, books, people)
     array_of_rentals.map do |hash|
-person = people.find { |p| puts "#{p.id} is #{hash["person_id"]} "
-   p.id == hash["person_id"] }
+      person = people.find { |p|
+        puts "#{p.id} is #{hash["person_id"]} "
+        p.id == hash["person_id"]
+      }
       book = books.find { |b| b.id == hash['book_id'] }
-      puts person,book
+      puts person, book
       Rental.new(hash['date'], person, book)
     end
   end
