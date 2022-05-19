@@ -1,4 +1,4 @@
-require './person'
+require_relative '../person'
 
 describe Person do
   let(:person_one) { Person.new(27, 'Isma') }

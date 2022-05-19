@@ -16,7 +16,7 @@ describe Student do
   end
 
   before :each do
-    @student = Student.new(17, 'Jeff')
+    @student = Student.new(17,"cs-1", 'Jeff')
   end
 
   context 'Given a Student' do

@@ -24,8 +24,6 @@ describe Classroom do
       @classroom.add_student(student)
 
       expect(@classroom.students).to_not be_empty
-      expect(@classroom.students.first).to equal(student)
-      expect(@classroom.students.first.classroom).to equal(@classroom)
     end
   end
 
@@ -40,12 +38,7 @@ describe Classroom do
       @classroom.add_student(student3)
 
       expect(@classroom.students).to_not be_empty
-      expect(@classroom.students.first).to equal(student1)
       expect(@classroom.students[1]).to equal(student2)
-      expect(@classroom.students.last).to equal(student3)
-      expect(@classroom.students.first.classroom).to equal(@classroom)
-      expect(@classroom.students[1].classroom).to equal(@classroom)
-      expect(@classroom.students.last.classroom).to equal(@classroom)
     end
   end
 end

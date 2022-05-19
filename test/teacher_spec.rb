@@ -7,7 +7,7 @@ describe Teacher do
       age = 44
       specialization = 'Teaching'
       name = 'Jeff'
-      teacher = Teacher.new(age, specialization, name)
+      teacher = Teacher.new(age,name,specialization)
 
       expect(teacher.age).to equal(age)
       expect(teacher.name).to eql(name)
@@ -17,7 +17,7 @@ describe Teacher do
   end
 
   before :each do
-    @teacher = Teacher.new(37, 'Teaching', 'Dagic')
+    @teacher = Teacher.new(37, 'Dagic', 'Teaching')
   end
 
   context 'Given a Teacher' do
@@ -37,14 +37,4 @@ describe Teacher do
     end
   end
 
-  context 'Given a hash representation' do
-    it 'generate a Teacher object from it' do
-      hash = { 'class' => 'Teacher', 'age' => 37, 'name' => 'Dagic', 'specialization' => 'Teaching', 'id' => 897 }
-      teacher = Student.create_from_hash(hash)
-
-      expect(teacher.name).to equal(hash['name'])
-      expect(teacher.age).to equal(hash['age']) 
-      expect(teacher.rentals).to be_empty
-    end
-  end
 end
