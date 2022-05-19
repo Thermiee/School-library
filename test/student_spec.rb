@@ -6,7 +6,7 @@ describe Student do
     it 'creates a new student with the correct parameters' do
       age = 16
       name = 'Dagic'
-      student = Student.new(age,"section-a", name)
+      student = Student.new(age, 'section-a', name)
 
       expect(student.age).to equal(age)
       expect(student.name).to eql(name)
@@ -16,7 +16,7 @@ describe Student do
   end
 
   before :each do
-    @student = Student.new(17,"cs-1", 'Jeff')
+    @student = Student.new(17, 'cs-1', 'Jeff')
   end
 
   context 'Given a Student' do

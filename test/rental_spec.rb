@@ -5,7 +5,7 @@ require_relative '../book'
 describe Rental do
   context 'Given a date, a person and a book' do
     it 'creates a new rental with the correct parameters' do
-      person = Student.new(28,"section B","Jack")
+      person = Student.new(28, 'section B', 'Jack')
       book = Book.new('My book', 'Author')
       date = '18/05/2022'
 
@@ -18,7 +18,7 @@ describe Rental do
   end
 
   before :each do
-    person = Student.new(18,"dept-12","Fitse")
+    person = Student.new(18, 'dept-12', 'Fitse')
     book = Book.new('My book', 'Author')
     date = '18/05/2022'
 
@@ -27,7 +27,7 @@ describe Rental do
 
   context 'given a student object' do
     it 'assigns the student object to the rental correctly ' do
-      new_person = Student.new(20,"cz-1","Cesar")
+      new_person = Student.new(20, 'cz-1', 'Cesar')
 
       @rental.person = new_person
 

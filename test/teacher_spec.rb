@@ -7,7 +7,7 @@ describe Teacher do
       age = 44
       specialization = 'Teaching'
       name = 'Jeff'
-      teacher = Teacher.new(age,name,specialization)
+      teacher = Teacher.new(age, name, specialization)
 
       expect(teacher.age).to equal(age)
       expect(teacher.name).to eql(name)
@@ -36,5 +36,4 @@ describe Teacher do
       expect(hash[:id]).to eql(@teacher.id)
     end
   end
-
 end
