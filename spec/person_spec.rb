@@ -6,7 +6,7 @@ describe Person do
   context 'Given age' do
     it 'creates a new person with the correct parameters' do
       age = 27
-      person = Person.new(age,"dagi")
+      person = Person.new(age, 'dagi')
 
       expect(person.age).to equal(age)
       expect(person.name).to eql('dagi')
@@ -43,7 +43,7 @@ describe Person do
 
   context 'Given a Rental' do
     it 'adds the rental to rentals array of person' do
-      rental = Rental.new('18/02/2021', Person.new(19,"Mr x"), Book.new('Harry', 'Potter'))
+      rental = Rental.new('18/02/2021', Person.new(19, 'Mr x'), Book.new('Harry', 'Potter'))
       @person.add_rental(rental)
 
       expect(@person.rentals).to_not be_empty
